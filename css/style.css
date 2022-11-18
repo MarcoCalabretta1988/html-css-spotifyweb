@@ -198,7 +198,7 @@ header button{
     text-align: center;
     padding-bottom: 10px;
   }
-  
+
   .content-nav li{
     display: inline-block;
     padding: 15px 0;
@@ -221,17 +221,20 @@ header button{
 
    /* CONTENT MAIN */
 
-   .col{
+   .content .col{
     padding: 15px;
     flex-basis: 50%;
     text-align: center;
     }
-
-    .row:last-child img{
+    
+    .content .row{
+        margin-left: -15px
+    }
+    .content .row:last-child img{
         border-radius: 50%;
     }
 
-
+/* FOOTER */
 footer{
     height: 100px;
     width: 100%;
@@ -240,6 +243,72 @@ footer{
     bottom: 0;
     left: 0;
     z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    padding: 10px;
+}
+
+/* FOOTER GENERAL */
+footer strong{
+    font-size: 12px;
+    display: block;
+}
+
+footer span{
+    font-size: 10px;
+    line-height: 10px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+footer .col{
+ padding: 3px;
+}
+
+/* FOOTER LEFT */
+.footer-left{
+    flex-basis: 25%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left .col:first-child{
+    flex-basis: 80%;
+}
+
+.footer-left .col:last-child{
+    flex-basis: 20%;
+    text-align: right;
+    flex-shrink: 0;
+    color: var(--txt-grey);
+}
+
+.footer-left div:first-child{
+    flex-shrink: 0;
+}
+
+/* FOOTER CENTER */
+.footer-center{
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* FOOTER RIGHT */
+.footer-right{
+    text-align: center;
+    flex-basis: 30%;
+    flex-shrink: 0;
+}
+
+.footer-right i{
+    padding: 0 3px;
+    font-size: 13px;
 }
 
 
@@ -260,7 +329,7 @@ footer{
     header button{
         margin-right: 210px;
     }
-    
+
     /* MAIN NAV */
 
     .main-nav{
@@ -268,7 +337,7 @@ footer{
         padding: 20px;
         align-items: flex-start;
     }
-    
+
     .main-nav span{
         display: inline-block;
         align-self: center;
@@ -303,7 +372,7 @@ footer{
     .main-nav .download-ico img{
         margin: 5px 0;
     }
-    
+
     .download-ico{
         border-bottom: 1px solid var(--txt-grey);
     }
@@ -315,32 +384,38 @@ footer{
     .nav-footer{
         width: 100%;
     }
-    
+
     .nav-playlist{
         display: inline-block;
         padding-top: 15px;
     }
-   
-    
+
+
 }
+
+
+
 /* RESPONSIVE TO 878 */
 @media screen and (min-width: 878px){
 
  /* CONTENT MAIN */
 
- .col{
+ .content .col{
     flex-basis: 25%;
     }
 
 }
+
+
+
 /* RESPONSIVE TO 1440 */
 
 @media screen and (min-width: 1440px){
 
     /* CONTENT MAIN */
-   
-    .col{
+
+    .content .col{
        flex-basis: calc(100% / 6);
        }
-   
+
    }
