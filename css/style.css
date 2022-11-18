@@ -6,6 +6,33 @@
     box-sizing: border-box;
 }
 
+
+/* ROOT */
+
+   /* PALETTE */
+
+   :root{
+
+    --mainbg-grey: #141922;
+    --ft-grey:#282828;
+    --txt-grey:#595959;
+
+   }
+/* GENERAL */
+
+img{
+    max-width: 100%;
+    display: inline-block;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* UTILITIES */
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -22,30 +49,217 @@
     display: flex;
 }
 
+.pos-relative{
+    position: relative;
+}
+
+/* TEXT UTILITIES */
+
+.txt-white{
+    color:#fff;
+}
+
+h5{
+    padding: 10px 0;
+}
+
+
+/* MAIN NAVBAR */
+
+    /* NAV GENERAL */
+    .main-nav{
+        flex-basis: 50px;
+        flex-shrink: 0;
+        background-color: #000;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--txt-grey);
+    }
+
+    .main-nav img{
+        padding: 5px 0;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .main-nav span{
+        display: none;
+    }
+
+    /* LOGO */
+    .logo img:first-child{
+        display: none;
+    }
+
+    /* NAV PLAYLIST */
+    .nav-playlist{
+        display: none;
+
+    }
+
+    .playlist{
+        margin: 10px 0;
+        overflow: auto;
+        height: 250px
+    }
+
+    .playlist ul{
+      list-style-type: none;
+    }
+
+    .playlist li{
+        padding: 10px 0;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .nav-playlist i{
+        width: 37px;
+        height: 37px;
+        background-color: #808080;
+        color:#000;
+        text-align: center;
+        line-height: 37px;
+        vertical-align: middle;
+        font-size: 22px;
+    }
+
+    /* ICON NAV FOOTER */
+    .main-nav .download-ico img{
+        width: 15px;
+        margin: 20px auto;
+    }
+
+    .main-nav .user-ico img{
+        width: 25px;
+        height: 25px;
+        background-color: #808080;
+        border-radius: 50%;
+    }
+
+
+
+
+
+/* MAIN */
+
+main{
+    flex-grow: 1;
+    position:relative;
+    color: #fff;
+}
+
 /* HEADER */
 
 header{
-    min-height: 200px;
+    height: 100px;
     width: 100%;
-    background-color: black;
-    position: sticky;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
 }
 
-.sidebar{
-    flex-basis: 500px;
-    flex-shrink: 0;
+.content{
+    height: calc(100vh - 100px);
+    background-color: var(--mainbg-grey);
+    padding: 120px 20px;
+    overflow: auto;
+
+
 }
 
-main{
-    height: 800px;
-    background-color: blueviolet;
-    flex-grow: 1;
-    position: relative;
-}
 footer{
-    height: 350px;
-    width: 100vw;
-    background-color: aquamarine;
+    height: 100px;
+    width: 100%;
+    background-color:var(--ft-grey);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
+
+
+/* MEDIA QUERY */
+
+/* RESPONSIVE TO 639 */
+
+@media screen and (min-width: 639px){
+
+
+
+    /* HEADER */
+
+    header{
+        margin-left: 200px;
+    }
+    
+    /* MAIN NAV */
+
+    .main-nav{
+        flex-basis: 200px;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    
+    .main-nav span{
+        display: inline-block;
+        align-self: center;
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight:bold;
+
+    }
+
+    .logo img:first-child{
+        display: inline-block;
+        width: 140px;
+        padding-bottom: 20px;
+    }
+
+    .logo img:last-child{
+        display: none;
+    }
+
+    .selected{
+        border-left: 3px solid #ADFF2F;
+        height: 40px;
+        position: absolute;
+        top: 92px;
+        left: 0;
+    }
+
+    .download-ico span{
+        font-size: 15px;
+    }
+
+    .main-nav .download-ico img{
+        margin: 5px 0;
+    }
+    
+    .download-ico{
+        border-bottom: 1px solid var(--txt-grey);
+    }
+
+    .user-ico{
+        margin-top: 10px;
+    }
+
+    .nav-footer{
+        width: 100%;
+    }
+    
+    .nav-playlist{
+        display: inline-block;
+        padding-top: 15px;
+    }
+   
+    
+}
+/* RESPONSIVE TO 878 */
+/* RESPONSIVE TO 1440 */
