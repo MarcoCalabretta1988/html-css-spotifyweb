@@ -158,11 +158,22 @@ header{
     width: 100%;
     margin-left: 50px;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0.5;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header button{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 43px;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-right: 60px;
 }
 
 .content{
@@ -197,6 +208,10 @@ footer{
 
     header{
         margin-left: 200px;
+    }
+
+    header button{
+        margin-right: 210px;
     }
     
     /* MAIN NAV */
