@@ -1,0 +1,51 @@
+/* CSS RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dashed red;
+}
+
+.card{
+    min-height: 200px;
+    width: 100px;
+    background-color: aquamarine;
+}
+
+.flex{
+    display: flex;
+}
+
+/* HEADER */
+
+header{
+    min-height: 200px;
+    width: 100%;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.sidebar{
+    flex-basis: 500px;
+    flex-shrink: 0;
+}
+
+main{
+    height: 800px;
+    background-color: blueviolet;
+    flex-grow: 1;
+    position: relative;
+}
+footer{
+    height: 350px;
+    width: 100vw;
+    background-color: aquamarine;
+}
