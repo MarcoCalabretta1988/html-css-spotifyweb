@@ -39,6 +39,10 @@ span{
     font-weight: bold;
 }
 
+i{
+    cursor: pointer;
+}
+
 /* UTILITIES */
 
 .row{
@@ -61,6 +65,7 @@ span{
     background-color: var(--txt-grey);
     height: 3px;
     position: relative;
+    cursor: pointer;
 }
 
 .value{
@@ -71,6 +76,19 @@ span{
  width: 20%;
  background-color: #fff;
  border-radius: 20px;
+}
+
+.marker{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    display: none;
 }
 
 /* TEXT UTILITIES */
@@ -116,7 +134,6 @@ h5{
     .main-nav img{
         padding: 5px 0;
         width: 30px;
-        cursor: pointer;
     }
 
     .main-nav span{
@@ -211,6 +228,7 @@ header button{
     border: 1px solid #fff;
     border-radius: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 /* CONTENT */
@@ -219,6 +237,7 @@ header button{
     height: calc(100vh - 100px);
     overflow: auto;
     position: relative;
+    
 }
 
   /* CONTENT NAV */
@@ -250,6 +269,10 @@ header button{
   }
 
    /* CONTENT MAIN */
+   
+   .content-main {
+    padding: 0 20px;
+   }
 
    .content .col{
     padding: 15px;
@@ -257,6 +280,28 @@ header button{
     text-align: center;
     }
     
+    .content-main figure{
+        position: relative;
+    }
+
+    .content-play{
+       position: absolute;
+       top:0;
+       left: 0;
+       background-color: rgba(0, 0, 0, 0.5);
+       width: 100%;
+       height: 100%;
+       display: none;
+    }
+
+    .content-play i{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       font-size: 80px;
+    }
+
     .content .row{
         margin-left: -15px;
     }
@@ -379,6 +424,74 @@ justify-content: space-between;
  flex-grow: 1;
  align-self: center;
 }
+
+
+
+/* HOOVER EFFECT */
+
+/* HEADER HOOVER EFFECT */
+header button:hover{
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* MAIN NAV HOVER EFFECT */
+.main-nav li:hover, .main-nav span:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-nav .h-icon:hover img{
+    filter: drop-shadow(1px 1px 1px #fff);
+}
+
+.nav-playlist .add-playlist:hover i{
+    background-color: #fff;
+}
+
+.nav-playlist .add-playlist:hover span{
+    color: #fff;
+}
+
+/* CONTENT HOOVER EFFECT */
+
+.content-nav a:hover{
+    color: #fff;
+}
+
+.content-main figure:hover .content-play{
+    display: inline-block;
+}
+
+.row:last-child figure:hover .content-play{
+    border-radius: 50%;
+}
+
+/* FOOTER HOVER EFFECT */
+
+  /* FOOTER-LEFT HOVER EFFECT */
+
+  .footer-left i:hover{
+    color: #fff;
+  }
+
+  .footer-left span:hover{
+    text-decoration: underline;
+    color: #fff;
+  }
+ 
+  .controls .fa-circle-play:hover{
+    font-size: 40px;
+  }
+
+  .bar:hover .value{
+        background-color: #ADFF2F;
+  }
+ 
+  .bar:hover .marker{
+    display: inline-block;
+}
+
 
 
 /* MEDIA QUERY */
