@@ -9,14 +9,18 @@
 
 /* ROOT */
 
-   /* PALETTE */
+   
 
    :root{
-
+     
+    /* PALETTE */
     --mainbg-grey: #141922;
     --ft-grey:#383838;
     --txt-grey:#959595;
 
+    /* DIMENSION */
+
+    --sidebar-dimension: 50px;
    }
 /* GENERAL */
 
@@ -70,12 +74,18 @@ h5{
     padding: 10px 0;
 }
 
+/* TOP CONTENT */
+
+.top-content{
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
 
 /* MAIN NAVBAR */
 
     /* NAV GENERAL */
     .main-nav{
-        flex-basis: 50px;
+        flex-basis: var(--sidebar-dimension);
         flex-shrink: 0;
         background-color: #000;
         padding: 10px;
@@ -83,6 +93,7 @@ h5{
         justify-content: space-between;
         align-items: center;
         color: var(--txt-grey);
+        height: 100%;
     }
 
     .main-nav img{
@@ -154,21 +165,23 @@ h5{
 
 main{
     flex-grow: 1;
-    position:relative;
     color: #fff;
+    background-color: var(--mainbg-grey);
+
 }
+
+
 
 /* HEADER */
 
 header{
     height: 100px;
     width: 100%;
-    margin-left: 50px;
+    position: sticky;
     background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: 50px;
     justify-content: flex-end;
     align-items: center;
 }
@@ -180,15 +193,15 @@ header button{
     font-size: 15px;
     border: 1px solid #fff;
     border-radius: 20px;
-    margin-right: 60px;
+    margin-right: 20px;
 }
 
 /* CONTENT */
+
 .content{
     height: calc(100vh - 100px);
-    background-color: var(--mainbg-grey);
-    padding: 110px 20px;
     overflow: auto;
+    position: relative;
 }
 
   /* CONTENT NAV */
@@ -228,8 +241,9 @@ header button{
     }
     
     .content .row{
-        margin-left: -15px
+        margin-left: -15px;
     }
+
     .content .row:last-child img{
         border-radius: 50%;
     }
@@ -239,10 +253,6 @@ footer{
     height: 100px;
     width: 100%;
     background-color:var(--ft-grey);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
     justify-content: space-between;
     align-items: center;
     color:#fff;
@@ -323,17 +333,17 @@ footer .col{
     /* HEADER */
 
     header{
-        margin-left: 200px;
+        left: 200px;
     }
 
-    header button{
-        margin-right: 210px;
-    }
 
     /* MAIN NAV */
+     
+      :root{
+        --sidebar-dimension: 200px;
+      }
 
     .main-nav{
-        flex-basis: 200px;
         padding: 20px;
         align-items: flex-start;
     }
