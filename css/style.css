@@ -604,6 +604,11 @@ header button:hover{
 }
 
 
+@media screen and (min-width: 986px){
+    .footer-center{
+        padding: 0 100px;
+    }
+}
 
 /* RESPONSIVE TO 1440 */
 
@@ -616,7 +621,7 @@ header button:hover{
        }
 
        .footer-center{
-        padding: 0 200px;
+        padding: 0 250px;
     }
 
    }
