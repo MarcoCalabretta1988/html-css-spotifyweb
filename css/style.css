@@ -56,6 +56,23 @@ span{
     position: relative;
 }
 
+.bar{
+    border-radius: 20px;
+    background-color: var(--txt-grey);
+    height: 3px;
+    position: relative;
+}
+
+.value{
+ position: absolute;
+ left: 0;
+ top:0;
+ height: 100%;
+ width: 20%;
+ background-color: #fff;
+ border-radius: 20px;
+}
+
 /* TEXT UTILITIES */
 
 .txt-white{
@@ -273,7 +290,7 @@ footer span{
 footer img{
     width: 30px;
     height: 30px;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 footer .col{
@@ -282,10 +299,11 @@ footer .col{
 
 /* FOOTER LEFT */
 .footer-left{
-    flex-basis: 25%;
+    flex-basis: 160px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
+
 }
 
 .footer-left .col:first-child{
@@ -294,7 +312,6 @@ footer .col{
 
 .footer-left .col:last-child{
     flex-basis: 20%;
-    text-align: right;
     flex-shrink: 0;
     color: var(--txt-grey);
 }
@@ -307,18 +324,60 @@ footer .col{
 .footer-center{
     text-align: center;
     flex-grow: 1;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.footer-center i{
+    font-size: 15px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.controls{
+    line-height: 30px;
+}
+
+.footer-center .fa-circle-play{
+    font-size: 28px;
+    margin: 0 20px;
+
+}
+
+.footer-center .progress-bar{
+justify-content: space-between;
+}
+
+
+.footer-center .bar{
+   align-self: center;
+   width: 100px;
+   flex-grow: 1;
+
+}
+
+.progress-bar span{
+    padding: 0 10px;
 }
 
 /* FOOTER RIGHT */
 .footer-right{
     text-align: center;
-    flex-basis: 30%;
+    flex-basis: 160px;
     flex-shrink: 0;
 }
 
 .footer-right i{
-    padding: 0 3px;
+    padding: 0 5px;
     font-size: 13px;
+}
+
+.footer-right .bar{
+ flex-grow: 1;
+ align-self: center;
 }
 
 
@@ -414,6 +473,21 @@ footer .col{
     flex-basis: 25%;
     }
 
+    /* FOOTER */
+    
+
+    .footer-left .col:last-child{
+         display: flex;
+    }
+
+    .footer-left i{
+        padding: 0 5px;
+    }
+
+
+    .footer-center{
+        padding: 0 80px;
+    }
 }
 
 
@@ -427,5 +501,9 @@ footer .col{
     .content .col{
        flex-basis: calc(100% / 6);
        }
+
+       .footer-center{
+        padding: 0 200px;
+    }
 
    }
