@@ -346,8 +346,8 @@ footer .col{
 .footer-left{
     flex-basis: 160px;
     flex-shrink: 0;
-    display: flex;
     align-items: center;
+    display: none;
 
 }
 
@@ -413,6 +413,7 @@ justify-content: space-between;
     text-align: center;
     flex-basis: 160px;
     flex-shrink: 0;
+    display: none;
 }
 
 .footer-right i{
@@ -496,7 +497,18 @@ header button:hover{
 
 /* MEDIA QUERY */
 
-/* RESPONSIVE TO 639 */
+/* RESPONSIVE TO 535px */
+
+@media screen and (min-width: 535px){
+
+    .footer-left{
+        display: flex;
+    }
+    .footer-right{
+        display: flex;
+    }
+}
+/* RESPONSIVE TO 639px */
 
 @media screen and (min-width: 639px){
 
@@ -577,7 +589,7 @@ header button:hover{
 
 
 
-/* RESPONSIVE TO 878 */
+/* RESPONSIVE TO 878px */
 @media screen and (min-width: 878px){
 
  /* CONTENT MAIN */
@@ -610,7 +622,7 @@ header button:hover{
     }
 }
 
-/* RESPONSIVE TO 1440 */
+/* RESPONSIVE TO 1440px */
 
 @media screen and (min-width: 1440px){
 
