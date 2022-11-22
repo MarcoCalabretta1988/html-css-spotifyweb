@@ -306,7 +306,7 @@ header button{
         margin-left: -15px;
     }
 
-    .content .row:last-child img{
+    #most-popular img{
         border-radius: 50%;
     }
 
@@ -464,7 +464,7 @@ header button:hover{
     display: inline-block;
 }
 
-.row:last-child figure:hover .content-play{
+#most-popular figure:hover .content-play{
     border-radius: 50%;
 }
 
